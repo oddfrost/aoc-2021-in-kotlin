@@ -50,4 +50,6 @@ abstract class AdventDay {
             emptyList()
         }
     }
+
+    val dayNumber: String = this.javaClass.simpleName.removePrefix("Day")
 }
