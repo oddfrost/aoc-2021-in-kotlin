@@ -3,20 +3,23 @@ package calendar
 import java.io.File
 import java.util.*
 
+const val stubResult = "UNIMPLEMENTED"
 abstract class AdventDay {
     open fun main() {
         val testData = readInput("-test")
-        info(testData)
-
-        print("Test: ")
-        println(test(testData))
-        println()
+        val testResult = test(testData)
+        if (testResult != stubResult){
+            println("Test 1: $testResult")
+        }
 
         val input = readInput()
-        info(input)
-
         print("First part: ")
         println(part1solution(input))
+
+        val test2Result = test2(testData)
+        if (test2Result != stubResult){
+            println("Test 2: $test2Result")
+        }
 
         print("Second part: ")
         println(part2solution(input))
@@ -27,15 +30,19 @@ abstract class AdventDay {
     }
 
     open fun test(input: List<String>): String {
-        return "Nothing happened"
+        return stubResult
+    }
+
+    open fun test2(input: List<String>): String {
+        return stubResult
     }
 
     open fun part1solution(input: List<String>): String {
-        return "IMPLEMENT ME"
+        return stubResult
     }
 
     open fun part2solution(input: List<String>): String {
-        return "IMPLEMENT ME"
+        return stubResult
     }
 
     /**
