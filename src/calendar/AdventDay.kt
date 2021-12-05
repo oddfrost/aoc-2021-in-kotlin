@@ -53,7 +53,7 @@ abstract class AdventDay {
         return if (file.exists()) {
             file.readLines()
         } else {
-            println("File '${file.absolutePath}' not found")
+//            println("File '${file.absolutePath}' not found")
             emptyList()
         }
     }
