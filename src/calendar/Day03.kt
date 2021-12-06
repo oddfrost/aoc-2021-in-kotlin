@@ -15,7 +15,7 @@ class Day03 : AdventDay() {
 
     fun calculatePowerConsumption(input: List<String>): Int {
         val lineLen = input[0].length
-        val counter = Counter(lineLen)
+        val counter = IntArray(lineLen) { 0 }
         input.forEach { line ->
             for (i in 0 until lineLen) {
                 counter[i] += Character.getNumericValue(line[i])
@@ -61,15 +61,5 @@ class Day03 : AdventDay() {
         }
         return filterNumbers(data, pos + 1, stopAt, byCommon)
     }
-
-    class Counter(size: Int) {
-        val arr = IntArray(size) { 0 }
-
-        operator fun get(i: Int): Int = arr[i]
-        operator fun set(i: Int, j: Int) {
-            arr[i] = j
-        }
-    }
-
 
 }
