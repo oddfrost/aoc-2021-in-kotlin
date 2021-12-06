@@ -83,7 +83,7 @@ class Day05 : AdventDay() {
         }
 
         fun countOverlaps(min: Int = 2): Int{
-            return map.count { (key, value) -> value >= min }
+            return map.count { (_, value) -> value >= min }
         }
 
         override fun toString(): String {
