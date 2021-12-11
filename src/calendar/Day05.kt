@@ -23,9 +23,9 @@ class Day05 : AdventDay() {
         return detector.countOverlaps().toString()
     }
 
-    override fun part1solution(input: List<String>): String = test(input)
+    override fun part1solution(input: List<String>): String = test1(input)
 
-    override fun test(input: List<String>): String {
+    override fun test1(input: List<String>): String {
         val points = input.map { it.split(" -> ") }
         val detector = VentsDetector<Pair<Int, Int>>()
 

@@ -2,7 +2,7 @@ package calendar
 
 class Day03 : AdventDay() {
 
-    override fun test(input: List<String>): String {
+    override fun test1(input: List<String>): String {
         return calculatePowerConsumption(input).toString()
     }
 
@@ -10,7 +10,7 @@ class Day03 : AdventDay() {
         return calculateLifeSupportRating(input)
     }
 
-    override fun part1solution(input: List<String>): String = test(input)
+    override fun part1solution(input: List<String>): String = test1(input)
     override fun part2solution(input: List<String>): String = test2(input)
 
     fun calculatePowerConsumption(input: List<String>): Int {
