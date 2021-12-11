@@ -36,9 +36,9 @@ class Day06 : AdventDay() {
         }
     }
 
-    override fun part1solution(input: List<String>): String = test(input)
+    override fun part1solution(input: List<String>): String = test1(input)
 
-    override fun test(input: List<String>): String {
+    override fun test1(input: List<String>): String {
         return fishySimulation(input[0]).toString()
     }
 
