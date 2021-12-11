@@ -7,7 +7,7 @@ const val stubResult = "UNIMPLEMENTED"
 abstract class AdventDay {
     open fun main() {
         val testData = readInput("-test")
-        val testResult = test(testData)
+        val testResult = test1(testData)
         if (testResult != stubResult){
             println("Test 1: $testResult")
         }
@@ -29,7 +29,7 @@ abstract class AdventDay {
         println("Processing ${input.size} lines")
     }
 
-    open fun test(input: List<String>): String {
+    open fun test1(input: List<String>): String {
         return stubResult
     }
 

@@ -31,9 +31,9 @@ class Day04 : AdventDay() {
         return lastBoard.sumUnMarked().toString()
     }
 
-    override fun part1solution(input: List<String>) = test(input)
+    override fun part1solution(input: List<String>) = test1(input)
 
-    override fun test(input: List<String>): String {
+    override fun test1(input: List<String>): String {
         val numbers = ArrayDeque(numbersCalled(input))
         val boards = parseBoards(input)
         val winningSums = HashSet<Int>()
