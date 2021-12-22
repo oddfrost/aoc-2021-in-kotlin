@@ -35,9 +35,9 @@ class Day02 : AdventDay() {
         val words = command.split(' ')
         return Pair(words[0], words[1].toInt())
     }
-}
 
-data class Position(var x: Int = 0, var z: Int = 0, var aim: Int = 0) {
-    val distance: Int
-        get() = x * z
+    data class Position(var x: Int = 0, var z: Int = 0, var aim: Int = 0) {
+        val distance: Int
+            get() = x * z
+    }
 }
