@@ -5,11 +5,12 @@ class Day12 : AdventDay() {
     override fun part1solution(input: List<String>): String = test1(input)
 
     override fun test1(input: List<String>): String {
+        caves = HashSet()
         parseInput(input)
         return findPaths()
     }
 
-    val caves = HashSet<Cave>()
+    var caves = HashSet<Cave>()
 
     fun parseInput(input: List<String>) {
         input.map { it.split("-") }.forEach { names ->
